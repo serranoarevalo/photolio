@@ -76,4 +76,14 @@ export const query = graphql`
   }
 `;
 
+// query City($city: String){
+//   allFile(filter: {extension: {eq: "jpg"} , relativeDirectory : { eq: $city}}) {
+//     edges {
+//       node {
+//         relativePath
+//       }
+//     }
+//   }
+// }
+
 export default IndexPage;
