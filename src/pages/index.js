@@ -38,7 +38,7 @@ const Emphasys = styled.span`
   color: #fc4746;
 `;
 
-const IndexPage = ({ data: { site: { siteMetadata } } }) => (
+const IndexPage = ({ data: { site: { siteMetadata }, allMarkdownRemark } }) => (
   <Container>
     <div>
       <Title>Serrano Arévalo</Title>
@@ -61,6 +61,16 @@ export const query = graphql`
         title
         location
         travelStart
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            city
+            flag
+          }
+        }
       }
     }
   }

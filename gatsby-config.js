@@ -5,6 +5,14 @@ module.exports = {
     travelStart: "2015-06-02"
   },
   plugins: [
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "projects",
+        path: `${__dirname}/cities/`
+      }
+    },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
